@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim
-  revision: d3a71cd00ec3d98d6ed24da036b23ed64736d8f1
+  revision: 661369a894f3d955c21db84013ad95584a2333da
   branch: release/0.22-stable
   specs:
     decidim (0.22.0)
