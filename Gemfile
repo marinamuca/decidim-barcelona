@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-DECIDIM_MAIN_BRANCH = "feature/bcn-budget-v0.24"
+DECIDIM_MAIN_BRANCH = "release/0.24-stable-bcn"
 
 DECIDIM_VERSION = { git: "https://github.com/AjuntamentdeBarcelona/decidim", branch: DECIDIM_MAIN_BRANCH }.freeze
 
@@ -48,13 +48,12 @@ group :development do
   gem 'listen'
   gem 'spring'
   gem 'spring-watcher-listen'
+  gem 'spring-commands-rspec'
   gem "rubocop", "~> 0.92.0"
   gem "letter_opener_web"
 end
 
 group :production do
-  # can be removed after
-  gem "letter_opener_web"
   gem "sidekiq"
   gem "rails_12factor"
   gem "fog-aws"
