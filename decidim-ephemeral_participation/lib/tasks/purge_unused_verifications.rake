@@ -7,14 +7,14 @@ namespace :decidim do
       print "Deleting #{unused_autorizations.count} authorizations... "
 
       conflicts = 0
-      unused_autorizations.find_each do |authorization|
+      unused_authorizations.find_each do |authorization|
         conflicts += conflicts_for(authorization.user).delete_all
         authorization.destroy!
       end
       print "and #{conflicts} related conflicts.\n"
     end
 
-    def unused_autorizations
+    def unused_authorizations
       Decidim::Authorization.where(user: lost_ephemeral_users)
     end
 
