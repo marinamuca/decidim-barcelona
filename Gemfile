@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-DECIDIM_MAIN_BRANCH = "release/0.24-stable-bcn"
+DECIDIM_MAIN_BRANCH = "develop-bcn"
 
 DECIDIM_VERSION = { git: "https://github.com/AjuntamentdeBarcelona/decidim", branch: DECIDIM_MAIN_BRANCH }.freeze
 
@@ -19,11 +19,11 @@ gem "decidim-navigation_maps", "~> 1.2.0"
 # Change term_customizer dependency to ruby-gems' when term-customizer is compatible with DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/CodiTramuntana/decidim-module-term_customizer"
 
-gem "sassc", "~> 2.4.0"
 
-gem "sprockets", "~> 3.7", "< 4"
+gem "webpacker", "6.0.0.beta.7"
+
 gem "virtus-multiparams"
-gem "wicked_pdf", "~> 1.4"
+gem "wicked_pdf", "~> 2.1"
 gem "wkhtmltopdf-binary"
 gem "geocoder", "~> 1.6.1"
 
@@ -78,6 +78,6 @@ group :production do
 end
 
 group :test do
-  gem "rspec-rails", "~> 3.7"
+  gem "rspec-rails", "~> 4.0"
   gem "database_cleaner"
 end
