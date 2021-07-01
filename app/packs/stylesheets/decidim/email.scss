@@ -1,0 +1,39 @@
+
+a:hover{
+  color: #147dc2;
+}
+
+table.button table td{
+  background: #c24b29;
+  border: 2px solid #c24b29;
+}
+
+table.button table td a{
+  font-weight: bold;
+  border: 0 solid #c24b29;
+}
+
+table.button.radius table td{
+  border-radius: 3px;
+}
+
+table.button.expand,
+table.button.expanded{
+  width: 100% !important;
+}
+
+table.button.expand table,
+table.button.expanded table{
+  width: 100%;
+}
+
+table.button:hover table td,
+table.button:visited table td,
+table.button:active table td{
+  background: #147dc2;
+}
+
+table.body th.decidim-bar,
+table.body td.decidim-bar{
+  background-color: #f3f3f3;
+}
