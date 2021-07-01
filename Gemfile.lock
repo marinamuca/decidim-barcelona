@@ -1,7 +1,15 @@
 GIT
-  remote: https://github.com/AjuntamentdeBarcelona/decidim
-  revision: 042e540558ed61e2a19e968e4e99f8f23c718059
-  branch: develop-bcn
+  remote: https://github.com/CodiTramuntana/decidim-module-term_customizer
+  revision: 03ba3bc60a8416a236ab7c1f84f91649ed46b9e8
+  specs:
+    decidim-term_customizer (0.18.0)
+      decidim-admin (>= 0.18.0)
+      decidim-core (>= 0.18.0)
+
+GIT
+  remote: https://github.com/decidim/decidim
+  revision: fa5425d3da7d18dbd3cf4d9341fcd8dc4e660496
+  branch: develop
   specs:
     decidim (0.25.0.dev)
       decidim-accountability (= 0.25.0.dev)
@@ -189,14 +197,6 @@ GIT
       decidim-forms (= 0.25.0.dev)
     decidim-verifications (0.25.0.dev)
       decidim-core (= 0.25.0.dev)
-
-GIT
-  remote: https://github.com/CodiTramuntana/decidim-module-term_customizer
-  revision: 03ba3bc60a8416a236ab7c1f84f91649ed46b9e8
-  specs:
-    decidim-term_customizer (0.18.0)
-      decidim-admin (>= 0.18.0)
-      decidim-core (>= 0.18.0)
 
 PATH
   remote: decidim-census_sms
@@ -501,7 +501,7 @@ GEM
       ffi (~> 1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    graphql (1.12.12)
+    graphql (1.12.13)
     hashdiff (1.0.1)
     hashie (4.1.0)
     highline (2.0.3)

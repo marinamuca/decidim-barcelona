@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-DECIDIM_MAIN_BRANCH = "develop-bcn"
+DECIDIM_MAIN_BRANCH = "develop"
 
-DECIDIM_VERSION = { git: "https://github.com/AjuntamentdeBarcelona/decidim", branch: DECIDIM_MAIN_BRANCH }.freeze
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: DECIDIM_MAIN_BRANCH }.freeze
 
 ruby RUBY_VERSION
 
@@ -18,7 +18,6 @@ gem "decidim-navigation_maps", "~> 1.2.0"
 
 # Change term_customizer dependency to ruby-gems' when term-customizer is compatible with DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/CodiTramuntana/decidim-module-term_customizer"
-
 
 gem "webpacker", "6.0.0.beta.7"
 
