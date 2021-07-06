@@ -1,0 +1,3 @@
+$(() => {
+  iFrameResize({}, "iframe.autoheight")
+})

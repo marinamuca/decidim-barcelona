@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@decidim/all": "file:packages/all"
+    "@decidim/all": "file:packages/all",
+    "iframe-resizer": "^4.3.2"
   },
   "devDependencies": {
     "@decidim/dev": "file:packages/dev"
