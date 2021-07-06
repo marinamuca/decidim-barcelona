@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@decidim/all": "file:packages/all",
+    "decidim-module-navigation_maps": "github:AjuntamentdeBarcelona/decidim-module-navigation_maps#feature/webpacker-migration",
     "iframe-resizer": "^4.3.2"
   },
   "devDependencies": {
@@ -10,6 +11,10 @@
     "presets": [
       "./node_modules/@rails/webpacker/package/babel/preset.js"
     ]
+  },
+  "engines": {
+    "node": "^15.14.0",
+    "npm": "^7.7.6"
   },
   "browserslist": [
     "extends @decidim/browserslist-config"

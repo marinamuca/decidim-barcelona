@@ -14,10 +14,10 @@ gem "decidim-sortitions", DECIDIM_VERSION
 gem "decidim-stats", path: "decidim-stats"
 gem "decidim-valid_auth", path: "decidim-valid_auth"
 gem "decidim-ephemeral_participation", path: "decidim-ephemeral_participation"
-gem "decidim-navigation_maps", "~> 1.2.0"
+gem "decidim-navigation_maps", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-navigation_maps", branch: "feature/webpacker-migration" }
 
 # Change term_customizer dependency to ruby-gems' when term-customizer is compatible with DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/CodiTramuntana/decidim-module-term_customizer"
+gem "decidim-term_customizer", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-term_customizer", branch: "feature/webpacker-migration" }
 
 gem "webpacker", "6.0.0.beta.7"
 
