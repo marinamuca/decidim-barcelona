@@ -33,3 +33,5 @@ config/deploy*
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+public/decidim-packs

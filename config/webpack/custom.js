@@ -1,7 +1,7 @@
 /* eslint-disable */
 
-const path = require("path");
-const { config } = require("@rails/webpacker");
+const path = require("path")
+const { config } = require("@rails/webpacker")
 
 module.exports = {
   module: {
@@ -10,49 +10,46 @@ module.exports = {
         test: require.resolve("quill"),
         loader: "expose-loader",
         options: {
-          exposes: ["Quill"]
-        }
+          exposes: ["Quill"],
+        },
       },
       {
         test: require.resolve("jquery"),
         loader: "expose-loader",
         options: {
-          exposes: ["$", "jQuery"]
-        }
+          exposes: ["$", "jQuery"],
+        },
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules\/(?!tributejs)/,
-        loader: "babel-loader"
+        loader: "babel-loader",
       },
       {
         test: /\.(graphql|gql)$/,
-        loader: "graphql-tag/loader"
+        loader: "graphql-tag/loader",
       },
       {
         test: require.resolve("react"),
         loader: "expose-loader",
         options: {
-          exposes: ["React"]
-        }
+          exposes: ["React"],
+        },
       },
       {
         test: require.resolve("@rails/ujs"),
         loader: "expose-loader",
         options: {
-          exposes: ["Rails"]
-        }
+          exposes: ["Rails"],
+        },
       },
       {
-        test: [
-          /\.md$/,
-          /\.odt$/,
-        ],
+        test: [/\.md$/, /\.odt$/, /\.csv$/],
         exclude: [/\.(js|mjs|jsx|ts|tsx)$/],
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'media/documents/[hash][ext][query]'
-        }
+          filename: "media/documents/[hash][ext][query]",
+        },
       },
       // Overwrite webpacker files rule to amend the filename output
       // and include the name of the file, otherwise some SVGs
@@ -72,26 +69,26 @@ module.exports = {
           /\.ttf$/,
           /\.woff$/,
           /\.woff2$/,
-          /\.svg$/
+          /\.svg$/,
         ],
         exclude: [/\.(js|mjs|jsx|ts|tsx)$/],
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'media/images/[name]-[hash][ext][query]'
-        }
-      }
-    ]
+          filename: "media/images/[name]-[hash][ext][query]",
+        },
+      },
+    ],
   },
   resolve: {
     extensions: [".js", ".jsx", ".gql", ".graphql"],
     fallback: {
-      crypto: false
-    }
+      crypto: false,
+    },
   },
   // https://github.com/rails/webpacker/issues/2932
   // As Decidim uses multiple packs, we need to enforce a single runtime, to prevent duplication
   optimization: {
-    runtimeChunk: false
+    runtimeChunk: false,
   },
-  entry: config.entrypoints
+  entry: config.entrypoints,
 }
