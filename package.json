@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@decidim/all": "file:packages/all",
+    "@geoman-io/leaflet-geoman-free": "^2.11.2",
     "decidim-module-navigation_maps": "github:AjuntamentdeBarcelona/decidim-module-navigation_maps#feature/webpacker-migration",
     "iframe-resizer": "^4.3.2"
   },
