@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/AjuntamentdeBarcelona/decidim-module-navigation_maps
-  revision: 04a655cebca7ba8676d4d483f467acf1333e0b82
-  branch: feature/webpacker-migration
+  revision: 32f96e9e8f1a0b2415a82e4f19baef94f2cca256
+  branch: feature/active_storage-migration
   specs:
     decidim-navigation_maps (2.0.0)
       decidim-admin (>= 0.25.0.dev)

@@ -14,7 +14,7 @@ gem "decidim-sortitions", DECIDIM_VERSION
 gem "decidim-stats", path: "decidim-stats"
 gem "decidim-valid_auth", path: "decidim-valid_auth"
 gem "decidim-ephemeral_participation", path: "decidim-ephemeral_participation"
-gem "decidim-navigation_maps", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-navigation_maps", branch: "feature/webpacker-migration" }
+gem "decidim-navigation_maps", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-navigation_maps", branch: "feature/active_storage-migration" }
 gem "decidim-term_customizer", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-term_customizer", branch: "feature/webpacker-migration" }
 
 gem "webpacker", "6.0.0.beta.7"
