@@ -19,8 +19,8 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim
-  revision: fa5425d3da7d18dbd3cf4d9341fcd8dc4e660496
-  branch: develop
+  revision: 45c824b8ab9c37dcd1ca6241e49e3cdb94c6ad07
+  branch: active_storage_migration
   specs:
     decidim (0.25.0.dev)
       decidim-accountability (= 0.25.0.dev)
@@ -310,6 +310,22 @@ GEM
     ast (2.4.2)
     autoprefixer-rails (8.6.5)
       execjs
+    aws-eventstream (1.1.1)
+    aws-partitions (1.477.0)
+    aws-sdk-core (3.117.0)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.239.0)
+      aws-sigv4 (~> 1.1)
+      jmespath (~> 1.0)
+    aws-sdk-kms (1.44.0)
+      aws-sdk-core (~> 3, >= 3.112.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.96.1)
+      aws-sdk-core (~> 3, >= 3.112.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.1)
+    aws-sigv4 (1.2.4)
+      aws-eventstream (~> 1, >= 1.0.2)
     axe-core-api (4.2.1)
       capybara
       dumb_delegator
@@ -544,6 +560,7 @@ GEM
     invisible_captcha (0.13.0)
       rails (>= 3.2.0)
     ipaddress (0.8.3)
+    jmespath (1.4.0)
     jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -934,6 +951,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk-s3
   barnes
   bootsnap
   byebug
@@ -952,7 +970,6 @@ DEPENDENCIES
   decidim-valid_auth!
   deface
   dotenv-rails
-  execjs (~> 2.7.0)
   faker (= 2.14.0)
   fog-aws
   geocoder (~> 1.6.1)
@@ -978,7 +995,6 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   spring-watcher-listen
-  uglifier
   virtus-multiparams
   webpacker (= 6.0.0.beta.7)
   wicked_pdf (~> 2.1)

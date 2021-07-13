@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-DECIDIM_MAIN_BRANCH = "develop"
+DECIDIM_MAIN_BRANCH = "active_storage_migration"
 
 DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: DECIDIM_MAIN_BRANCH }.freeze
 
@@ -15,8 +15,6 @@ gem "decidim-stats", path: "decidim-stats"
 gem "decidim-valid_auth", path: "decidim-valid_auth"
 gem "decidim-ephemeral_participation", path: "decidim-ephemeral_participation"
 gem "decidim-navigation_maps", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-navigation_maps", branch: "feature/webpacker-migration" }
-
-# Change term_customizer dependency to ruby-gems' when term-customizer is compatible with DECIDIM_VERSION
 gem "decidim-term_customizer", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-term_customizer", branch: "feature/webpacker-migration" }
 
 gem "webpacker", "6.0.0.beta.7"
@@ -26,14 +24,11 @@ gem "wicked_pdf", "~> 2.1"
 gem "wkhtmltopdf-binary"
 gem "geocoder", "~> 1.6.1"
 
-gem 'uglifier'
-gem 'lograge'
+gem "lograge"
 gem "deface"
 gem "progressbar"
 gem "puma"
 gem "origami"
-
-gem "execjs", "~> 2.7.0"
 
 # Needed to be able to debug Puma status
 gem "barnes"
@@ -63,6 +58,7 @@ group :development do
 end
 
 group :production do
+  gem "aws-sdk-s3", require: false
   gem "sidekiq"
   gem "rails_12factor"
   gem "fog-aws"
