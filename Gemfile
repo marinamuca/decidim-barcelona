@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-DECIDIM_MAIN_BRANCH = "active_storage_migration"
+DECIDIM_MAIN_BRANCH = "active_storage_migrations_service"
 
 DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: DECIDIM_MAIN_BRANCH }.freeze
 
