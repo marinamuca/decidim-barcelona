@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-DECIDIM_MAIN_BRANCH = "active_storage_migrations_service"
+DECIDIM_MAIN_BRANCH = "release/0.25-stable"
 
 DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: DECIDIM_MAIN_BRANCH }.freeze
 
@@ -17,7 +17,7 @@ gem "decidim-ephemeral_participation", path: "decidim-ephemeral_participation"
 gem "decidim-navigation_maps", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-navigation_maps", branch: "feature/active_storage-migration" }
 gem "decidim-term_customizer", { git: "https://github.com/AjuntamentdeBarcelona/decidim-module-term_customizer", branch: "feature/webpacker-migration" }
 
-gem "webpacker", "6.0.0.beta.7"
+gem "webpacker", "6.0.0.rc5"
 
 gem "virtus-multiparams"
 gem "wicked_pdf", "~> 2.1"

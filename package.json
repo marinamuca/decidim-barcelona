@@ -1,23 +1,24 @@
 {
+  "name": "app",
+  "private": true,
   "dependencies": {
-    "@decidim/all": "file:packages/all",
-    "@geoman-io/leaflet-geoman-free": "^2.11.2",
-    "decidim-module-navigation_maps": "github:AjuntamentdeBarcelona/decidim-module-navigation_maps#feature/webpacker-migration",
-    "iframe-resizer": "^4.3.2"
+    "@decidim/browserslist-config": "file:packages/browserslist-config",
+    "@decidim/core": "file:packages/core",
+    "@decidim/elections": "file:packages/elections",
+    "@decidim/webpacker": "file:packages/webpacker"
   },
-  "devDependencies": {
-    "@decidim/dev": "file:packages/dev"
-  },
+  "version": "0.1.0",
   "babel": {
     "presets": [
       "./node_modules/@rails/webpacker/package/babel/preset.js"
     ]
   },
-  "engines": {
-    "node": "^15.14.0",
-    "npm": "^7.7.6"
-  },
   "browserslist": [
     "extends @decidim/browserslist-config"
-  ]
+  ],
+  "devDependencies": {
+    "@decidim/dev": "file:packages/dev",
+    "@decidim/eslint-config": "file:packages/eslint-config",
+    "@decidim/stylelint-config": "file:packages/stylelint-config"
+  }
 }
