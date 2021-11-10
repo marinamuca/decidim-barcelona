@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_21_152417) do
+ActiveRecord::Schema.define(version: 2021_11_10_161116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -414,10 +414,13 @@ ActiveRecord::Schema.define(version: 2021_07_21_152417) do
     t.jsonb "body"
     t.integer "comments_count", default: 0, null: false
     t.datetime "deleted_at"
+    t.string "decidim_participatory_space_type"
+    t.integer "decidim_participatory_space_id"
     t.index ["created_at"], name: "index_decidim_comments_comments_on_created_at"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_comments_comments_on_decidim_author"
     t.index ["decidim_author_id"], name: "decidim_comments_comment_author"
     t.index ["decidim_commentable_type", "decidim_commentable_id"], name: "decidim_comments_comment_commentable"
+    t.index ["decidim_participatory_space_id", "decidim_participatory_space_type"], name: "index_decidim_comments_on_decidim_participatory_space"
     t.index ["decidim_root_commentable_type", "decidim_root_commentable_id"], name: "decidim_comments_comment_root_commentable"
     t.index ["decidim_user_group_id"], name: "index_decidim_comments_comments_on_decidim_user_group_id"
   end
@@ -850,6 +853,7 @@ ActiveRecord::Schema.define(version: 2021_07_21_152417) do
     t.string "video_url"
     t.string "audio_url"
     t.boolean "closing_visible"
+    t.boolean "show_embedded_iframe", default: false
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_meetings_meetings_on_author"
     t.index ["decidim_author_id"], name: "index_decidim_meetings_meetings_on_decidim_author_id"
     t.index ["decidim_component_id"], name: "index_decidim_meetings_meetings_on_decidim_component_id"
