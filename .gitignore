@@ -34,4 +34,5 @@ config/deploy*
 yarn-debug.log*
 .yarn-integrity
 
-public/decidim-packs
+node_modules
+public/decidim_packs
