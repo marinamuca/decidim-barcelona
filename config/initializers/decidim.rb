@@ -30,7 +30,7 @@ Decidim.configure do |config|
   end
 
   config.timestamp_service = "TimestampService"
-  #config.pdf_signature_service = "PdfSignatureBarcelona"
+  config.pdf_signature_service = "PdfSignatureBarcelona"
 
   config.etherpad = Rails.application.secrets.etherpad if Rails.application.secrets.etherpad[:server].present?
 end

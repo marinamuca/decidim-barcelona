@@ -63,7 +63,7 @@ group :production do
   gem "fog-aws" # to remove once image migration is complete
   gem "rack_password"
   gem "rack-ssl-enforcer"
-  gem "rack-timeout"
+  # gem "rack-timeout"
   gem "rails_12factor"
   gem "rails_autoscale_agent"
   gem "scout_apm"
